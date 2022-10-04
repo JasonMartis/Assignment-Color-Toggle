@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 10px;
+}
+
+/* 1. HAMBURGER  */
+/* 2. SIDEBAR */
+/* 3. COLORS  */
+/* 4. NAME OF COLOR */
+
+/* =================
+    1. HAMBURGER
+================= */
+
+.button-menu {
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+#nav-icon1 {
+  width: 60px;
+  height: 45px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+#nav-icon1 span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #000;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+#nav-icon1 span:nth-child(1) {
+  top: 0px;
+}
+#nav-icon1 span:nth-child(2) {
+  top: 18px;
+}
+#nav-icon1 span:nth-child(3) {
+  top: 36px;
+}
+#nav-icon1.active span:nth-child(1) {
+  top: 18px;
+  transform: rotate(135deg);
+}
+#nav-icon1.active span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+#nav-icon1.active span:nth-child(3) {
+  top: 18px;
+  transform: rotate(-135deg);
+}
+
+/* =================
+    2. SIDEBAR
+================= */
+
+.sidebar {
+  position: absolute;
+  left: 0;
+  transform: translateX(-100%);
+  margin: 10px 0;
+  background: #dcdcdc;
+  padding: 10px;
+  width: 300px;
+  transition: transform 0.25s ease-out;
+}
+.sidebar.active {
+  transform: translateX(0);
+}
+
+.sidebar ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.sidebar a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: arial, verdana;
+  font-weight: 400;
+  padding: 5px 0;
+}
+
+.overflow-scroll {
+  overflow: hidden;
+}
+
+/* =================
+    3. COLORS
+================= */
+
+.backgroundColor {
+  background-color: #fdf5e6;
+  /* background-color: #c48f2d; */
+}
+
+.bgHome {
+  background-color: #fdf5e6;
+}
+
+.bgYellow {
+  background-color: yellow;
+}
+.bgOrange {
+  background-color: Orange;
+}
+.bgRed {
+  background-color: rgb(233, 48, 48);
+}
+.bgPink {
+  background-color: rgb(243, 137, 155);
+}
+.bgPurple {
+  background-color: rgb(170, 63, 170);
+}
+.bgBlue {
+  background-color: rgb(55, 206, 226);
+}
+.bgGreen {
+  background-color: yellowgreen;
+}
+
+/* =================
+    4. NAME OF COLOR
+================= */
+
+#nameColor {
+  text-transform: uppercase;
+  font-size: 5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
